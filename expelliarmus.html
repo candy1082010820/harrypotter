@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+  	<script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<title>Expelliarmus</title>
+</head>
+<body>
+	<audio>
+    <source = src="201.mp3">
+	</audio>
+	<img class="first" src="202.png">
+	<img class="second" src="203.png">
+	<div class="bt">
+	<ul>
+        <li><a href="https://candy1082010820.github.io/harrypotter/harrypotter.html"><span class="glyphicon glyphicon-hand-right"></span>按我結束體驗</a></li>
+    </ul>
+	</div>
+	<style>
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;	
+		}
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		html{
+			cursor:url(002.cur),default !important;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		img{
+			width: 80vw;
+			height: 100vh;
+			margin-right: 10vw;
+			margin-left: 10vw;
+		}
+		body{
+			background: black;
+		}
+		.bt{
+			background-color: #483D8B;
+			width: 120px;
+			height: 30px;	
+ 			margin: 0 auto;
+ 			font-family: 標楷體;
+			text-align: center;
+			position: fixed;        
+			bottom: 0px;           
+			right: 0px;
+		}
+		.second{
+			display: none;
+		}
+.bt a{
+	color: white;
+	</style>
+	<script>		
+		$('.first').click(function(){
+			var audio = document.createElement("audio");
+			audio.src = "201.mp3";			
+			audio.play();	
+			$(this).next('.second').fadeIn(1500);
+			$(this).toggle();			
+		})
+		$('.second').click(function(){
+				$('.first').toggle();
+				$(this).toggle();
+			})		
+	</script>
+</body>
+</html>
