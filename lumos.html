@@ -20,7 +20,9 @@
 	<div class="fix"></div>
 	<audio src="100.mp3" autoplay loop></audio>
 	<script >
-		
+		$(function(){
+			audio.play();
+		});
 		var can = document.getElementById('canvas');
 		var ctx = can.getContext('2d');
 
