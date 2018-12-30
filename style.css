@@ -109,11 +109,27 @@ html{
 	margin-top: 20px;
 
 }
-.bt{
+.bt1{
 	background-color: #483D8B;
 	width: 200px;	
  	margin: 0 auto;
 }
-.bt a{
+.bt2{
+	background-color: #483D8B;
+	width: 200px;	
+ 	margin: 0 auto;
+}
+.bt3{
+	background-color: #483D8B;
+	width: 200px;	
+ 	margin: 0 auto;
+}
+.bt1 a{
+	color: white;
+}
+.bt2 a{
+	color: white;
+}
+.bt3 a{
 	color: white;
 }
