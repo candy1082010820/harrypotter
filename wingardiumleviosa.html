@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+  	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  	
+	<title>Wingardium Leviosa</title>
+</head>
+<body>
+	<audio src="302.mp3"controls="controls" prelaod id="music1" hidden></audio>
+	<audio src="301.mp3"controls="controls" prelaod id="music2" hidden></audio> 
+	<div class="first"><img src="304.png"></div>
+	<div class="float"></div>
+	<div id="second"><img src="303.png"></div>
+	<div class="float"></div>
+	<div class="third"><img src="305.png"></div>
+	<div class="bt">
+	<ul>
+        <li><a href="https://candy1082010820.github.io/harrypotter/harrypotter.html"><span class="glyphicon glyphicon-hand-right"></span>按我結束體驗</a></li>
+    </ul>
+	</div>
+	<style>
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;	
+		}
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		html{
+			cursor:url(002.cur),default !important;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		html{
+			cursor:url(002.cur),default !important;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		.float{clear: both;}
+		.first{
+			margin-top: 70vh;
+			margin-right: 10vw;
+			margin-left: 10vw;
+			margin-bottom: 0px;
+			z-index: -1;
+		}
+		.first img{
+			width: 80vw;
+			height: 30vh;
+		}
+		.first img:hover{
+			cursor: pointer;
+		}
+		#second{
+			margin-top:-40vh;
+			margin-left: 40vw;
+			margin-right: 0;
+			margin-bottom: 0;
+			z-index: 2;			
+		}
+		#second img{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+		}
+		.third{
+			margin-top:10vh;
+			margin-left: 10vw;
+			z-index: 0;
+		}
+		.third img{
+			width: 40vw;
+			height: 20vh;
+			opacity: 3;
+		}
+		body{
+			background: black;
+		}
+		.bt{
+			background-color: #483D8B;
+			width: 120px;
+			height: 30px;	
+ 			margin: 0 auto;
+ 			font-family: 標楷體;
+			text-align: center;
+			position: fixed;        
+			bottom: 0px;           
+			right: 0px;
+		}
+
+.bt a{
+	color: white;
+	</style>
+	<script>
+		$('.first').click(function(){
+ 			var audio = document.getElementById('music1'); 
+ 			var audio1 = document.getElementById('music2');
+  			if(audio.paused){                 
+      			alert('點擊桌子可結束遊戲');
+      			$('.third').hide();
+      			audio1.play();
+      			audio.play();
+      			$("#second img").mousemove(function(e){
+ 					$(document).bind("mousemove",function(e){
+  						$("#second img").css("top",e.pageY-100).css("left",e.pageX-100);
+ 					});
+				});
+ 				
+  			}
+  			else{
+   				audio.pause();
+   				audio.load();
+   				audio1.pause();
+   				audio1.load();
+   				$('.third').show();		
+ 				$("#second img").mousemove(function(){
+ 					$(document).unbind("mousemove");					
+ 				});
+ 				
+  			}
+  		});
+		
+	</script>
+</body>
+</html>
