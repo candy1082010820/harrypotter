@@ -134,6 +134,8 @@
   			if(audio.paused){                 
       			alert('點擊桌子可結束遊戲');
       			$('.third').hide();
+      			audio1.currentTime=0;
+      			audio.currentTime=0;
       			audio1.play();
       			audio.play();
       			$("#second img").mousemove(function(e){
@@ -143,15 +145,18 @@
 				});
  				
   			}
-  			else{
+  			else
+  			{
+  				$(document).off("mousemove");  		
+ 				$("#second img").off("mousemove");
+ 				
+ 				
    				audio.pause();
-   				audio.load();
+   				
    				audio1.pause();
-   				audio1.load();
+   				
    				$('.third').show();		
- 				$("#second img").mousemove(function(){
- 					$(document).unbind("mousemove");					
- 				});
+ 				
  				
   			}
   		});
